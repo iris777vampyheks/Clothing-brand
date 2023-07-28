@@ -26,11 +26,11 @@ export const OurProducts = () => {
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [cartItems, setCartItems] = useState([]);
 
-    const handleProductClick = (product) => {
+    const productClick = (product) => {
         setSelectedProduct(product);
     };
 
-    const handleAddToCart = (product) => {
+    const addTocart = (product) => {
         setCartItems((prevItems) => [...prevItems, product]);
     };
     return (
@@ -49,7 +49,7 @@ export const OurProducts = () => {
                         {selectedProduct ? (
                             <div className="centered-pic-container">
                                 <img className="product" src={selectedProduct.image} alt={selectedProduct.name} />
-                                <button className="add-to-cart-button ms-2 mb-2" onClick={() => handleAddToCart(selectedProduct)}>
+                                <button className="add-to-cart-button ms-2 mb-2" onClick={() => addTocart(selectedProduct)}>
                                     <a className="text-decoration-none text-dark" href="/cart">Add to Cart </a>
                                 </button>
                                 <NavLink className="icon-link pt-1" activeClassName="active" to="/favorie">
@@ -58,19 +58,19 @@ export const OurProducts = () => {
                             </div>
                         ) : (
                             <>
-                                <div onClick={() => handleProductClick({ image: product1, name: "Jacket 2023", price: "524.69£" })}>
+                                <div onClick={() => productClick({ image: product1, name: "Jacket 2023", price: "524.69£" })}>
                                     <img className="product mb-1" src={product1} alt="Jacket 2023" />
                                     <p>Jacket 2023 <br />524.69£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product2, name: "Cargo pant", price: "714.79£" })}>
+                                <div onClick={() => productClick({ image: product2, name: "Cargo pant", price: "714.79£" })}>
                                     <img className="product mb-1" src={product2} alt="Cargo pant" />
                                     <p>Cargo pant <br />714.79£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product3, name: "Orange pant", price: "634.25£" })}>
+                                <div onClick={() => productClick({ image: product3, name: "Orange pant", price: "634.25£" })}>
                                     <img className="product mb-1" src={product3} alt="Orange pant" />
                                     <p>Orange pant <br />634.25£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product4, name: "Beige jacket and pant", price: "309.99£" })}>
+                                <div onClick={() => productClick({ image: product4, name: "Beige jacket and pant", price: "309.99£" })}>
                                     <img className="product mb-1" src={product4} alt="Beige jacket and pant" />
                                     <p>
                                         Beige jacket and pant <br /> <span className="discounted-price">309.99£</span>{" "}
@@ -88,7 +88,7 @@ export const OurProducts = () => {
                         {selectedProduct ? (
                             <div className="centered-pic-container">
                                 <img className="product" src={selectedProduct.image} alt={selectedProduct.name} />
-                                <button className="add-to-cart-button ms-2 mb-2" onClick={() => handleAddToCart(selectedProduct)}>
+                                <button className="add-to-cart-button ms-2 mb-2" onClick={() => addTocart(selectedProduct)}>
                                     <a className="text-decoration-none text-dark" href="/cart">Add to Cart </a>
                                 </button>
                                 <NavLink className="icon-link pt-1" activeClassName="active" to="/favorie">
@@ -97,19 +97,19 @@ export const OurProducts = () => {
                             </div>
                         ) : (
                             <>
-                                <div onClick={() => handleProductClick({ image: product5, name: "Fashioned 2024", price: "524.69£" })}>
+                                <div onClick={() => productClick({ image: product5, name: "Fashioned 2024", price: "524.69£" })}>
                                     <img className="product mb-1" src={product5} alt="Fashioned 2024" />
                                     <p>Fashioned 2024 <br />524.69£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product6, name: "Classy pants", price: "714.79£" })}>
+                                <div onClick={() => productClick({ image: product6, name: "Classy pants", price: "714.79£" })}>
                                     <img className="product mb-1" src={product6} alt="Classy pants" />
                                     <p>Classy pants <br />714.79£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product8, name: "Spring wearing", price: "634.25£" })}>
+                                <div onClick={() => productClick({ image: product8, name: "Spring wearing", price: "634.25£" })}>
                                     <img className="product mb-1" src={product8} alt="Spring wearing" />
                                     <p>Spring wearing <br />634.25£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product9, name: "Trend to wear", price: "478.99£" })}>
+                                <div onClick={() => productClick({ image: product9, name: "Trend to wear", price: "478.99£" })}>
                                     <img className="product mb-1" src={product9} alt="Trend to wear" />
                                     <p>
                                         Trend to wear <br />
@@ -126,7 +126,7 @@ export const OurProducts = () => {
                         {selectedProduct ? (
                             <div className="centered-pic-container">
                                 <img className="product" src={selectedProduct.image} alt={selectedProduct.name} />
-                                <button className="add-to-cart-button ms-2 mb-2" onClick={() => handleAddToCart(selectedProduct)}>
+                                <button className="add-to-cart-button ms-2 mb-2" onClick={() => addTocart(selectedProduct)}>
                                     <a className="text-decoration-none text-dark" href="/cart">Add to Cart </a>
                                 </button>
                                 <NavLink className="icon-link pt-1" activeClassName="active" to="/favorie">
@@ -135,19 +135,19 @@ export const OurProducts = () => {
                             </div>
                         ) : (
                             <>
-                                <div onClick={() => handleProductClick({ image: product14, name: "Designed jackets", price: "524.69£" })}>
+                                <div onClick={() => productClick({ image: product14, name: "Designed jackets", price: "524.69£" })}>
                                     <img className="product mb-1" src={product14} alt="Designed jackets" />
                                     <p>Designed jackets <br />524.69£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product15, name: "Summer outfit", price: "714.79£" })}>
+                                <div onClick={() => productClick({ image: product15, name: "Summer outfit", price: "714.79£" })}>
                                     <img className="product mb-1" src={product15} alt="Summer outfit" />
                                     <p>Summer outfit <br />714.79£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product16, name: "Pants for summer", price: "634.25£" })}>
+                                <div onClick={() => productClick({ image: product16, name: "Pants for summer", price: "634.25£" })}>
                                     <img className="product mb-1" src={product16} alt="Pants for summer" />
                                     <p>Pants for summer <br />634.25£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product17, name: "Fashioned 2023", price: "309.99£" })}>
+                                <div onClick={() => productClick({ image: product17, name: "Fashioned 2023", price: "309.99£" })}>
                                     <img className="product mb-1" src={product17} alt="Fashioned 2023" />
                                     <p>
                                         Fashioned 2023 <br /> <span className="original-price">309.99£</span>
@@ -163,7 +163,7 @@ export const OurProducts = () => {
                         {selectedProduct ? (
                             <div className="centered-pic-container">
                                 <img className="product" src={selectedProduct.image} alt={selectedProduct.name} />
-                                <button className="add-to-cart-button ms-2 mb-2" onClick={() => handleAddToCart(selectedProduct)}>
+                                <button className="add-to-cart-button ms-2 mb-2" onClick={() => addTocart(selectedProduct)}>
                                     <a className="text-decoration-none text-dark" href="/cart">Add to Cart </a>
                                 </button>
                                 <NavLink className="icon-link pt-1" activeClassName="active" to="/favorie">
@@ -172,19 +172,19 @@ export const OurProducts = () => {
                             </div>
                         ) : (
                             <>
-                                <div onClick={() => handleProductClick({ image: product10, name: "Clothing style", price: "524.69£" })}>
+                                <div onClick={() => productClick({ image: product10, name: "Clothing style", price: "524.69£" })}>
                                     <img className="product mb-1" src={product10} alt="Clothing style" />
                                     <p>Clothing style <br />524.69£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product11, name: "Latest trend", price: "724.79£" })}>
+                                <div onClick={() => productClick({ image: product11, name: "Latest trend", price: "724.79£" })}>
                                     <img className="product mb-1" src={product11} alt="Latest trend" />
                                     <p>Latest trend <br />724.79£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product12, name: "Dressed well", price: "634.25£" })}>
+                                <div onClick={() => productClick({ image: product12, name: "Dressed well", price: "634.25£" })}>
                                     <img className="product mb-1" src={product12} alt="Dressed well" />
                                     <p>Dressed well <br />634.25£</p>
                                 </div>
-                                <div onClick={() => handleProductClick({ image: product13, name: "Fashioned dress", price: "309.99£" })}>
+                                <div onClick={() => productClick({ image: product13, name: "Fashioned dress", price: "309.99£" })}>
                                     <img className="product mb-1" src={product13} alt="Fashioned dress" />
                                     <p>
                                         Fashioned dress <br /> <span className="discounted-price">309.99£</span>{" "}

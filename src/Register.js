@@ -1,40 +1,27 @@
-import React, { Component } from "react";
-import "./styles/modules/home/_login.scss";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./styles/modules/home/_login.scss";
 
-class Register extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            email: "",
-            password: ""
-        };
-    }
+const Register = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-    handleRegister = () => {
+    const handleRegister = () => {
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPassword", password);
         alert("Registered successfully!");
     };
+    
 
-    handleChangeEmail = (e) => {
-        this.setState({ email: e.target.value });
-    };
-
-    handleChangePassword = (e) => {
-        this.setState({ password: e.target.value });
-    };
-
-    render() {
-        const { email, password } = this.state;
-
-        return (
-            <div className="loginPage">
+    return (
+        <div className="loginPage">
             <div className="d-flex flex-column gap-1">
                 <h1 className="title ms-2 mt-3 text-light">Register :</h1>
                 <input
                     className="input ms-2"
                     type="email"
                     value={email}
-                    onChange={this.handleChangeEmail}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="  Email"
                     required
                 />
@@ -42,20 +29,19 @@ class Register extends Component {
                     className="input ms-2"
                     type="password"
                     value={password}
-                    onChange={this.handleChangePassword}
+                    onChange={(e) => setPassword(e.target.value)}
                     placeholder="  Password"
                     required
                 />
                 <p className="ms-2 text-light">
                     Already have an account? <Link to="/login">Login</Link>
                 </p>
-                <button className="ms-2 btn text-light" onClick={this.handleRegister}>
+                <button className="ms-2 btn text-light" onClick={handleRegister}>
                     Register
                 </button>
             </div>
-            </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default Register;

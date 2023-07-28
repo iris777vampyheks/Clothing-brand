@@ -11,7 +11,6 @@ import Favorie from "./Favorie";
 import Register from "./Register";
 import Login from "./Login";
 import Cart from "./Cart";
-
 export const App = () => {
   return (
     <>

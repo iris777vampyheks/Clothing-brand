@@ -1,63 +1,50 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./styles/modules/home/_login.scss";
 
-class Login extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            email: "",
-            password: ""
-        };
-    }
+const Login = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-    handleLogin = () => {
-        const { email, password } = this.state;
-        if (email === "user@example.com" && password === "password") {
+    const handleLogin = () => {
+        const storedEmail = localStorage.getItem("userEmail");
+        const storedPassword = localStorage.getItem("userPassword");
+
+        if (email === storedEmail && password === storedPassword) {
             alert("Login successful!");
         } else {
             alert("Invalid email or password");
         }
     };
 
-    handleChangeEmail = (e) => {
-        this.setState({ email: e.target.value });
-    };
 
-    handleChangePassword = (e) => {
-        this.setState({ password: e.target.value });
-    };
-
-    render() {
-        const { email, password } = this.state;
-
-        return (
-            <div className="loginPage">
+    return (
+        <div className="loginPage">
             <div className="d-flex flex-column gap-1">
                 <h1 className="title text-light ms-2 mt-3">Login :</h1>
                 <input
                     className="input ms-2"
                     type="email"
                     value={email}
-                    onChange={this.handleChangeEmail}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="  Email"
                 />
                 <input
                     className="input ms-2"
                     type="password"
                     value={password}
-                    onChange={this.handleChangePassword}
+                    onChange={(e) => setPassword(e.target.value)}
                     placeholder="  Password"
                 />
                 <p className="ms-2 text-light">
                     Don't have an account? <Link to="/register">Register</Link>
                 </p>
-                <button className=" text-light ms-2 btn" onClick={this.handleLogin}>
+                <button className="text-light ms-2 btn" onClick={handleLogin}>
                     Login
                 </button>
             </div>
-            </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default Login;
