@@ -1,0 +1,177 @@
+.home {
+    height: 250vh;
+    font-family: Bahnschrift SemiBold;
+}
+
+
+
+//navbar 
+.navbar {
+    background-color: #f5f5f5;
+}
+
+.navdiv {
+    width: 69%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+
+.auth-button {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.login {
+    background-color: #ffb429;
+}
+
+.register {
+    background-color: #fa5f54;
+}
+
+.auth-button:hover {
+    opacity: 0.8;
+}
+
+.icon-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.icon-link {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+
+
+.cart {
+    padding-left: 17%;
+    display: flex;
+    gap: 15px;
+}
+
+
+.header {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: start;
+}
+
+.active {
+    color: red;
+}
+
+
+.first-sec {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-image: url(../../../assets/images/hanger.jpeg);
+}
+
+.header1 {
+    font-family: arial black;
+    font-weight: 900;
+    font-size: 70px;
+}
+
+.btn-shop {
+    margin-top: 50px;
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    border-style: none;
+}
+
+// section 2
+
+.levis3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imglevi {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+.diva {
+    height: 33px;
+    margin-left: 87px;
+    margin-top: 240px;
+    border-style: none;
+    position: relative;
+}
+
+
+// Section 3 :
+
+// section 4 
+.woman {
+    font-family: Bahnschrift SemiBold;
+    background-image: url(../../../assets/images/levis.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 450px;
+}
+
+//555555555555
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}

@@ -1,0 +1,21 @@
+.loginPage{
+    height: 97vh;
+    background-image: url(../../../assets/images/51109-Abstract-Blue-HD-Wallpaper.jpg);
+    background-position: left;
+    background-size: cover;
+}
+.title{
+    font-family: Rockwell;
+}
+.input{
+    border-radius: 10px;
+    width: 350px;
+}
+.btn{
+    background-color: rgb(222, 77, 77);
+    width: 150px;
+    height: 40px;
+}
+.btn:hover{
+    background-color: rgb(245, 82, 64);
+}

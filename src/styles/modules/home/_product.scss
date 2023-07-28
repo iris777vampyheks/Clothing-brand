@@ -1,0 +1,52 @@
+// .product-page{
+// }
+
+.firstProduct {
+    height: 300px;
+    background-image: url(../../../assets/images/black-white.jpg);
+}
+
+.head {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.img-pro {
+    width: 220px;
+    height: 280px;
+}
+
+.product-name{
+    font-weight: 700;
+    padding-top: 10px;
+}
+.product-price{
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.cate{
+    cursor: pointer;
+}
+.margin {
+    padding-right: 88px;
+}
+.input{
+    height: 50px;
+    width: 230px;
+}
+.search-container {
+    position: relative;
+}
+.search-icon {
+    position: absolute;
+    top: 73%;
+    right: 12px;
+    transform: translateY(-55%);
+    font-size: 1em;
+    color: #171616;
+    cursor: pointer;
+}
+.foot{
+    background-color: rgb(212, 211, 211);
+}
