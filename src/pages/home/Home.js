@@ -35,7 +35,6 @@ export const Home = () => {
 
 <OurProducts />
 
-
 {/* forth section */}
 
 <div className="woman d-flex align-items-center justify-content-center flex-column">
@@ -86,19 +85,6 @@ export const Home = () => {
 <img width="48" height="48" src="https://img.icons8.com/color/48/discover.png" alt="discover"/>
 </div>
 <p className="text-center text-muted">&copy; Copyright. All rights reserved.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
     </>

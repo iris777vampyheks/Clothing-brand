@@ -13,7 +13,6 @@ export const About = () => {
     <h1 className="text-center text-light abt ">ABOUT</h1>
       </div>
 
-
       <div className=" mt-3 ourStory d-flex flex-row align-items-center justify-content-center gap-3"> 
 <div>
 <img className="hanger" src={hanger} alt="" />

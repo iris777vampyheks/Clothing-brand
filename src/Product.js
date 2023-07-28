@@ -65,8 +65,6 @@ const Product = () => {
         return nameMatch && categoryMatch;
     });
     
-
-    // Split products l 3
     const rows = [];
     for (let i = 0; i < filteredProducts.length; i += 3) {
         rows.push(filteredProducts.slice(i, i + 3));
